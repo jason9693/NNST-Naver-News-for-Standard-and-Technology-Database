@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-import nnst_utils.params as par
+import nnst.nnst_utils.params as par
 import pprint
 import random
 

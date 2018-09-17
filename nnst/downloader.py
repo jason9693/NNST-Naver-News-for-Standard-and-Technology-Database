@@ -4,7 +4,7 @@ import time
 from datetime import date, timedelta
 import urllib.request as req
 import re
-import nnst_utils.params as par
+import nnst.nnst_utils.params as par
 
 category = par.category
 base_url = 'https://news.naver.com/main/ranking/popularDay.nhn?rankingType=popular_day&sectionId={}&date={}'

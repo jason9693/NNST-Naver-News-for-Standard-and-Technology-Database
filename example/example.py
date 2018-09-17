@@ -1,10 +1,10 @@
 import sys
 import os
 sys.path.append(os.path.abspath("./"))
-import downloader as downloader
+from nnst import downloader as downloader
 import pprint
 import argparse
-import nnst
+import nnst.nnst as nnst
 
 parser=argparse.ArgumentParser()
 
@@ -30,7 +30,7 @@ if args['num'] is not None:
 if args['num_train'] is not None:
     num_train = args['num_train']
 
-downloader.download(num,csv_path,date)
+downloader.download(num, csv_path, date)
 data = nnst.load_data(csv_path)
 
 train, test = nnst.div_dataset(data, train_size=num_train)

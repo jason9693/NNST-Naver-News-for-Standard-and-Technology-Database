@@ -22,13 +22,13 @@ print(parser.format_help())
 args = parser.parse_args().__dict__
 
 if args['csv_path'] is not None:
-    csv_path = args['csv_path']
+    csv_path = str(args['csv_path'])
 if args['date'] is not None:
-    date = args['date']
+    date = str(args['date'])
 if args['num'] is not None:
-    num = args['num']
+    num = int(args['num'])
 if args['num_train'] is not None:
-    num_train = args['num_train']
+    num_train = int(args['num_train'])
 
 downloader.download(num, csv_path, date)
 data = nnst.load_data(csv_path)

@@ -28,10 +28,10 @@ def download(data_per_category: int, csv_path: str, last_date: str = 20180918):
             # print('data set count: {}'.format(len(li)))
 
             if spare < 30:
-                dataset += [{'class': keyword, 'text': clean_text(t['title'])} for t in li][:spare]
+                dataset += [{'class': keyword, 'text': __clean_text__(t['title'])} for t in li][:spare]
                 print('[Status] ----- category {} download complete -----'.format(keyword))
             else:
-                dataset += [{'class':keyword, 'text': clean_text(t['title'])} for t in li]
+                dataset += [{'class':keyword, 'text': __clean_text__(t['title'])} for t in li]
 
             try:
                 progress = (100 / (data_per_category * 6) * len(dataset))
@@ -52,7 +52,7 @@ def __date_decrease__(news_date : str):
     newdate = date(t.tm_year, t.tm_mon, t.tm_mday) - timedelta(1)
     return newdate.strftime('%Y%m%d')
 
-def clean_text(text):
+def __clean_text__(text):
     #cleaned_text = re.sub('[a-zA-Z]', '', text)
     cleaned_text = re.sub('[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]',
                           ' ', text)

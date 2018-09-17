@@ -64,7 +64,7 @@
 
 ## 뉴스 데이터 파일 다운로드
            > import nnst.downloader as downloader
-           > downloader.donload(데이터 개수, csv파일 경로, 최신 뉴스 날짜)
+           > downloader.download(데이터 개수, csv파일 경로, 최신 뉴스 날짜)
 
 * 실행 결과:
 

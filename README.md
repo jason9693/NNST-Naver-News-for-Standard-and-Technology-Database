@@ -82,3 +82,6 @@
            > dataset = nnst.div_dataset(dataset, 트레이닝셋 사이즈)     #(train dataset, test dataset)
            > dataset = nnst.random_batch(dataset[0], 1batch의 사이즈)       #(batch data1, batch data2, ... )
 
+## License
+
+Project is published under the MIT licence. Feel free to clone and modify repo as you want, but don'y forget to add reference to authors :)

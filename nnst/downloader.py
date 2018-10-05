@@ -10,7 +10,7 @@ category = par.category
 base_url = 'https://news.naver.com/main/ranking/popularDay.nhn?rankingType=popular_day&sectionId={}&date={}'
 
 
-def download(data_per_category: int, csv_path: str, last_date: str = 20180918):
+def download(data_per_category: int, csv_path: str, last_date: str = '20180918'):
 
     opener = req.build_opener()
     dataset = []
